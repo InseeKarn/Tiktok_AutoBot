@@ -33,7 +33,7 @@ for index, row in df.iterrows():
     product_ids = [pid.strip() for pid in product_ids_raw.split("|") if pid.strip()]
 
     # ✅ Start TikTok
-    print(f"🎬 เปิดแอป TikTok เพื่ออัปโหลด: {video_path}")
+    print(f"🎬 Opening Tiktok: {video_path}")
     os.system("start shell:AppsFolder\\BytedancePte.Ltd.TikTok_6yccndn6064se!App")  # ← แก้ path นี้ให้ตรงกับเครื่องของคุณ
     time.sleep(DELAY_OPEN_APP)
 
@@ -98,7 +98,7 @@ for index, row in df.iterrows():
     pyautogui.scroll(-1000)
     # pyautogui.click(x=387, y=980)  # Post
     pyautogui.click(x=624, y=976)  # Save draft
-    print(f"✅ อัปโหลดสำเร็จ: {video_path}")
+    print(f"✅ Upload successfully: {video_path}")
     with open(index_file, "w") as f:
         f.write(str(last_index + 1))
 
